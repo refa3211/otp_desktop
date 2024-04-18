@@ -18,7 +18,7 @@ def main(page: ft.Page):
     page.window_width = 400
     page.window_height = 700
 
-    # Progerss bar
+    # Progress bar
     pr = ft.ProgressRing(width=16, height=16, stroke_width=20)
 
     def show_snakebar():
