@@ -1,5 +1,4 @@
 import time
-from ctypes import alignment
 from datetime import datetime
 
 import flet as ft
