@@ -1,4 +1,7 @@
+import time
 from ctypes import alignment
+from datetime import datetime
+
 import flet as ft
 import pyotp
 
@@ -51,6 +54,14 @@ def main(page: ft.Page):
 
     page.add(ct)
     page.update()
+    while True:
+        current_sec = datetime.now().second
+        timer = 30 - (current_sec % 30)
+        progress = timer / 30.0
+        pr.value = progress
+        text_otp.value = otpnow()
+        time.sleep(1)
+        page.update()
 
 
 ft.app(target=main)
